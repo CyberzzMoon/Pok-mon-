@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #d4d3dd, #efefbb);
+    font-family: "Roboto", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    letter-spacing: 3px;
+}
+
+#poke-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+.pokemon {
+    background-color: #eee;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    margin: 10px;
+    padding: 25px;
+    text-align: center;
+    width: 300px;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.pokemon:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.pokemon .img-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    padding: 20px;
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pokemon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.pokemon .info {
+    text-align: left;
+    margin-top: 15px;
+}
+
+.pokemon .info .number {
+    color: #666;
+    font-weight: 700;
+    font-size: 0.9rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 4px 8px;
+    border-radius: 12px;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.pokemon .info .name {
+    font-size: 1.4rem;
+    margin: 10px 0;
+    font-weight: 700;
+    color: #222;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.pokemon .types {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.pokemon .type {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.pokemon .details {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.pokemon .details .detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.pokemon .details .detail-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.pokemon .details .detail-value {
+    font-weight: 400;
+    color: #333;
+}
+
+.pokemon .abilities {
+    margin-top: 10px;
+}
+
+.pokemon .abilities .ability {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 4px 8px;
+    margin: 2px;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.pokemon .stats {
+    margin-top: 15px;
+}
+
+.pokemon .stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.pokemon .stat-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.pokemon .stat-value {
+    font-weight: 700;
+    color: #333;
+    min-width: 30px;
+}
